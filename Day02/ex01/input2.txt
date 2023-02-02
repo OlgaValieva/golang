@@ -1,0 +1,4 @@
+As you may see, the answer is always a calculated number and a filename separated by tab (\t). 
+If no flags are specified, -w behaviour should be used.
+Important: as all files are independent, you should utilize goroutines to process them concurrently.
+You can start as many goroutines as there are input files specified for the program.

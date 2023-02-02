@@ -1,0 +1,6 @@
+Now we are able to find our files, but we might need more meta information about what is in those files. 
+Let's implement a wc-like utility to gather basic statistics about our files.
+First things first, let's assume our files are utf-8 encoded text files, so your code should work with texts in Russian, too (forget about special cases like Arabic for now, only English and Russian are required).
+Also, you may ignore punctuation and just consider spaces as the only word delimiters.
+You'll need to implement three mutually exclusive (only one can be specified at a time, otherwise an error message is printed) flags for your code: -l for counting lines, -m for counting characters and -w for counting words.
+вот и всЕ
