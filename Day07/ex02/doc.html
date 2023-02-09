@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#375EAB">
+    <title>minCoins2</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <script>window.initFuncs = [];</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script>var goVersion = "go1.20";</script>
+    <script src="godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+    ...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+    <div class="top-heading" id="heading-wide"><a href="https://repos.21-school.ru/students/Go_Day07.ID_376229/carys_student.21_school.ru/Go_Day07-0/-/tree/develop">Day 07</a></div>
+    <div class="top-heading" id="heading-narrow"><a href="https://repos.21-school.ru/students/Go_Day07.ID_376229/carys_student.21_school.ru/Go_Day07-0/-/tree/develop">Go Boot camp</a></div>
+    <a href="#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+    <form method="GET" action="/search">
+        <div id="menu">
+            <span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+        </div>
+    </form>
+</div></div>
+<div id="page" class="wide">
+    <div class="container">
+        <h1>
+            Exercise 02: Elder Scrolls
+            <span class="text-muted"></span>
+        </h1>
+        <div id="nav"></div>
+        <!--
+            Copyright 2009 The Go Authors. All rights reserved.
+            Use of this source code is governed by a BSD-style
+            license that can be found in the LICENSE file.
+        -->
+        <!--
+            Note: Static (i.e., not template-generated) href and id
+            attributes start with "pkg-" to make it impossible for
+            them to conflict with generated attributes (some of which
+            correspond to Go identifiers).
+        -->
+        <script>
+            document.ANALYSIS_DATA = null;
+            document.CALLGRAPH = null;
+        </script>
+        <div id="short-nav">
+            <dl>
+                <dd><code>Now, as you've fixed the bug and wrote some tests for your code, it's time to generate some documentation for it.
+                    Describe in comments in your code how is your solution different from the default one and what optimizations did you use.
+                    Then, use any tool that you'll manage to find to generate the HTML documentation based on those comments.
+                    Directions on how to reproduce documentation generation should also be included in comments.
+                    Saving HTML pages from the web browser is considered cheating (even though not strictly prohibited, so if you couldn't do it any other way just write it explicitly in the comments).
+                    Submit generated documentation (HTML files + static, like images, js and css).</code></dd>
+            </dl>
+            <dl>
+                <dd><a href="#pkg-overview" class="overviewLink">minCoins</a></dd>
+                <dd><a href="#pkg-index" class="indexLink">minCoins2</a></dd>
+                <dd><a href="#pkg-examples" class="examplesLink">Examples</a></dd>
+            </dl>
+        </div>
+        <!-- The package's Name is printed as title by the top-level template -->
+        <div id="pkg-overview" class="toggleVisible">
+            <div class="collapsed">
+                <h2 class="toggleButton" title="Click to show Overview section">minCoins ▹</h2>
+            </div>
+            <div class="expanded">
+                <h2 class="toggleButton" title="Click to hide Overview section">minCoins ▾</h2>
+                 <pre class="code highlight js-syntax-highlight language-plaintext white" lang="plaintext" v-pre="true"><code><span id="LC1" class="line" lang="plaintext">func minCoins(val int, coins []int) []int {</span>
+                    <span id="LC2" class="line" lang="plaintext">    res := make([]int, 0)</span>
+                    <span id="LC3" class="line" lang="plaintext">    i := len(coins) - 1</span>
+                    <span id="LC4" class="line" lang="plaintext">    for i &gt;= 0 {</span>
+                    <span id="LC5" class="line" lang="plaintext">        for val &gt;= coins[i] {</span>
+                    <span id="LC6" class="line" lang="plaintext">            val -= coins[i]</span>
+                    <span id="LC7" class="line" lang="plaintext">            res = append(res, coins[i])</span>
+                    <span id="LC8" class="line" lang="plaintext">        }</span>
+                    <span id="LC9" class="line" lang="plaintext">        i -= 1</span>
+                    <span id="LC10" class="line" lang="plaintext">    }</span>
+                    <span id="LC11" class="line" lang="plaintext">    return res</span>
+                    <span id="LC12" class="line" lang="plaintext">}</span></code></pre>
+            </div>
+        </div>
+        <div id="pkg-index" class="toggleVisible">
+            <div class="collapsed">
+                <h2 class="toggleButton" title="Click to show Index section">minCoins2▹</h2>
+            </div>
+            <div class="expanded">
+                <h2 class="toggleButton" title="Click to hide Index section">minCoins2 ▾</h2>
+
+                <!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+            </div>
+            <div class="expanded">
+                <pre class="code highlight js-syntax-highlight language-plaintext white" lang="plaintext" v-pre="true"><code><span id="LC1" class="line" lang="plaintext">func minCoins2(val int, coins []int) []int {</span>
+                    <span id="LC2" class="line" lang="plaintext">    var res1, res2 []int</span>
+                    <span id="LC3" class="line" lang="plaintext">    var sum1 int</span>
+                    <span id="LC4" class="line" lang="plaintext">    for _, c := range coins {</span>
+                    <span id="LC5" class="line" lang="plaintext">    	if c <= 0 || len(coins) == 0 {</span>
+                    <span id="LC6" class="line" lang="plaintext">        		return []int{}</span>
+                    <span id="LC6" class="line" lang="plaintext">        	}</span>
+                    <span id="LC6" class="line" lang="plaintext">     }</span>
+                    <span id="LC7" class="line" lang="plaintext">     sort.Ints(coins)</span>
+                    <span id="LC8" class="line" lang="plaintext">     res := make([]int, 0, len(coins))</span>
+                    <span id="LC9" class="line" lang="plaintext">     temp := map[int]struct{}{}</span>
+                    <span id="LC10" class="line" lang="plaintext">    for _, item := range coins {</span>
+                    <span id="LC11" class="line" lang="plaintext">    	if _, ok := temp[item]; !ok {</span>
+                    <span id="LC12" class="line" lang="plaintext"> 		    temp[item] = struct{}{}</span>
+                    <span id="LC6" class="line" lang="plaintext">        	res = append(res, item)}</span>
+                    <span id="LC6" class="line" lang="plaintext">       }</span>
+                    <span id="LC6" class="line" lang="plaintext">     }</span>
+                    <span id="LC6" class="line" lang="plaintext">     for i := 0; i < len(coins); i++ {</span>
+                    <span id="LC6" class="line" lang="plaintext">     	res2 = minCoins(val, coins[:len(coins)-i])</span>
+                    <span id="LC6" class="line" lang="plaintext">     	if countSum(res2) == val {</span>
+                    <span id="LC6" class="line" lang="plaintext">     		if len(res1) == 0 {</span>
+                    <span id="LC6" class="line" lang="plaintext">     			    res1 = res2</span>
+                    <span id="LC6" class="line" lang="plaintext">        	} else if len(res1) > len(res2) {</span>
+                    <span id="LC6" class="line" lang="plaintext">     			res1 = res2</span>
+                    <span id="LC6" class="line" lang="plaintext">           }</span>
+                    <span id="LC6" class="line" lang="plaintext">         }</span>
+                    <span id="LC6" class="line" lang="plaintext">      }</span>
+                    <span id="LC6" class="line" lang="plaintext">      for _, i := range res1 {</span>
+                    <span id="LC6" class="line" lang="plaintext">      	    sum1 += i</span>
+                    <span id="LC6" class="line" lang="plaintext">      }</span>
+                    <span id="LC6" class="line" lang="plaintext">      if sum1 == val {</span>
+                    <span id="LC6" class="line" lang="plaintext">           return res1</span>
+                    <span id="LC6" class="line" lang="plaintext">      }</span>
+                    <span id="LC6" class="line" lang="plaintext">      return []int{}</span>
+                    <span id="LC6" class="line" lang="plaintext">   }</span></code></pre>
+            </div><!-- .expanded -->
+        </div><!-- #pkg-index -->
+        <ul>
+            <li>in case duplicates are present in a slice of denominations or it is not sorted, the function should still give a correct result. In case it is empty, an empty slice should be returned.</li>
+            <li>checks negative values of coins slice, so it will not have endless loop</li>
+            <li>sort coins slice at first, so the algorithm starts getting coins from the biggest denomination</li>
+            <li>go through coins slice starting from different coin to find better solution</li>
+            <li>checks sum of result coins to fit given value </li>
+            <li>In cycle call MinCoins without lastelem in sclice, check results and save if this correct and have less elements</li>
+        </ul>
+        <div id="example_MinCoins2" class="toggle">
+            <div class="collapsed">
+                <p class="exampleHeading toggleButton">▹ <span class="text">Example</span></p>
+            </div>
+            <div class="expanded">
+                <p class="exampleHeading toggleButton">▾ <span class="text">Example</span></p>
+                <p>Input:</p>
+                <pre class="code">fmt.Println("MinCoins2(6, []int{5, 4, 3, 2, 1}) = ", minCoins2(6, []int{5, 4, 3, 2, 1})
+                    <span class="comment"></pre>
+                <p>Output:</p>
+                <pre class="output">MinCoins2(6, []int{5, 4, 3, 2, 1}) =  [5 1]
+</pre>      </div>
+        </div>
+
+        <div id="footer">
+            Build version go1.20<br>
+            Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+            the content of this page is licensed under the
+            Creative Commons Attribution 3.0 License,
+            and code is licensed under a <a href="/LICENSE">BSD license</a>.<br>
+            <a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+            <a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+        </div>
+    </div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>
